@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.grid{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 2fr 1fr 7fr 2fr 1fr;
+    grid-template-areas: 
+    "logo navigation navigation"
+    "content content feature"
+    "content content feature"
+    "content content feature"
+    "content content feature"
+    "footer footer footer"
+    ;
+}
+
+
+.logo{
+    background: red;
+    grid-area: logo;
+}
+
+.navigation{
+    background: blue;
+    grid-area: navigation;
+}
+
+.content{
+    background: yellow;
+    grid-area: content;
+}
+
+.feature{
+    background: green;
+    grid-area: feature;
+}
+
+
+.footer{
+    background: black;
+    color: white;
+    grid-area: footer;
+}
+
+@media screen and (max-width: 600px){
+
+.grid{
+    grid-template-areas: 
+    "logo logo logo"
+    "navigation navigation navigation"
+    "content content content"
+    "feature feature feature"
+    "footer footer footer"
+    ;}
+}
